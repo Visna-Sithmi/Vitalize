@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="home" />
+
+    <item
+        android:id="@+id/nav_habits"
+        android:icon="@drawable/ic_habits"
+        android:title="habits" />
+
+
+    <item
+        android:id="@+id/nav_activity"
+        android:icon="@drawable/ic_activity"
+        android:title="activity" />
+
+
+    <item
+        android:id="@+id/nav_hydrate"
+        android:icon="@drawable/ic_hydrate"
+        android:title="hydrate" />
+
+    <item
+        android:id="@+id/nav_moods"
+        android:icon="@drawable/ic_mood"
+        android:title="Moods" />
+
+
+</menu>

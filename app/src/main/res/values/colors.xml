@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="cream">#CCCCCC</color>
+    <color name="inactiveGray">#AAAAAA</color>
+
+    <!-- Brand / App theme colors -->
+    <color name="primaryBlue">#3BA9F7</color>
+    <color name="hintGray">#666666</color>
+
+    <color name="splashstartColor">#FF6FB1</color>
+    <color name="splashendColor">#4AC9FF</color>
+
+
 </resources>

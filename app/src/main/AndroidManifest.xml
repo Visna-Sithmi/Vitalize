@@ -12,11 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vitalize">
         <activity
-            android:name=".SplashScreen"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
+            android:exported="false" /> <!-- Signup Activity (normal screen, not launcher) -->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" /> <!-- Splash Screen (Launcher) -->
+        <activity
+            android:name=".SplashScreen"
             android:exported="true">
+
+            <!-- Launcher intent filter must be inside the activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

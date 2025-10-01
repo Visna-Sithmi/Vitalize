@@ -1,3 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- App -->
     <string name="app_name">Vitalize</string>
+
+    <!-- Signup Page -->
+    <string name="signup_title">Create Account</string>
+    <string name="hint_name">Full Name</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="btn_signup">Register</string>
+    <string name="link_signin">Already have an account? Sign in</string>
+
+    <!-- Login Page -->
+    <string name="login_title">Welcome Back</string>
+    <string name="btn_login">Login</string>
+    <string name="link_signup">Don’t have an account? Create one</string>
+
+    <!-- Home Page -->
+    <string name="placeholder_user">Hello, User</string>
+    <string name="placeholder_date">Today’s Date</string>
+    <string name="desc_profile_picture">Profile picture</string>
+    <string name="desc_notifications">Notifications</string>
 </resources>
