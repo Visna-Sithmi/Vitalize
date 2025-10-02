@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <!-- ✅ Container for row background (we will change this dynamically in adapter) -->
+    <LinearLayout
+        android:id="@+id/habitRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <!-- ✅ CheckBox in front -->
+        <CheckBox
+            android:id="@+id/cbCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primaryBlue"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/edit_habit" />
+
+        <!-- Habit Name -->
+        <TextView
+            android:id="@+id/tvHabitName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/habit_name_placeholder"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+        <!-- Duration + Time -->
+        <TextView
+            android:id="@+id/tvHabitTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_habit_time"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/primaryBlue"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/logoutRed"
+            android:contentDescription="@string/delete_habit" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

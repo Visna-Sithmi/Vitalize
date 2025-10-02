@@ -22,4 +22,33 @@
     <string name="placeholder_date">Today’s Date</string>
     <string name="desc_profile_picture">Profile picture</string>
     <string name="desc_notifications">Notifications</string>
+
+    <!-- Sidebar -->
+    <string name="nav_backup">Backup Data</string>
+    <string name="nav_restore">Restore Data</string>
+    <string name="nav_logout">Logout</string>
+
+    <!-- Calendar -->
+    <string name="prev_month">Previous Month</string>
+    <string name="next_month">Next Month</string>
+    <string name="month_year_placeholder">Mar 2025</string>
+
+    <!-- Weekdays -->
+    <string name="day_sun">Sun</string>
+    <string name="day_mon">Mon</string>
+    <string name="day_tue">Tue</string>
+    <string name="day_wed">Wed</string>
+    <string name="day_thu">Thu</string>
+    <string name="day_fri">Fri</string>
+    <string name="day_sat">Sat</string>
+
+    <!-- Habits -->
+    <string name="habit_name_placeholder">Habit</string>
+    <string name="edit_habit">Edit Habit</string>
+    <string name="delete_habit">Delete Habit</string>
+    <string name="my_habits">My Habits</string>
+    <string name="add_habit">Add Habit</string>
+
+    <!-- Sample Data -->
+    <string name="sample_habit_time">10 mins | 08:00</string>
 </resources>

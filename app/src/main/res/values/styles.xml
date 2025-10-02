@@ -1,0 +1,18 @@
+<resources>
+    <!-- Style for NavigationView items -->
+    <style name="NavDrawerTextStyle">
+        <item name="android:textSize">18sp</item> <!-- Bigger sidebar font -->
+        <item name="android:textColor">#000000</item> <!-- Black text -->
+    </style>
+
+    <!-- Style for Calendar Weekday Headers -->
+    <style name="CalendarDayHeader">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/hintGray</item>
+    </style>
+</resources>

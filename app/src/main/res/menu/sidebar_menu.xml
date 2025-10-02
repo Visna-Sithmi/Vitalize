@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Main Menu Group -->
+    <group android:id="@+id/main_group">
+
+        <item
+            android:title=""
+            android:enabled="false"
+            android:icon="@null" />
+
+        <item
+            android:title=""
+            android:enabled="false"
+            android:icon="@null" />
+
+
+        <item
+            android:id="@+id/nav_backup"
+            android:title="@string/nav_backup"
+            android:icon="@drawable/ic_backup" />
+
+        <item
+            android:id="@+id/nav_restore"
+            android:title="@string/nav_restore"
+            android:icon="@drawable/ic_restore" />
+    </group>
+
+    <!-- Divider -->
+    <item android:title=""/>
+
+    <!-- Footer Logout -->
+    <group android:id="@+id/logout_group">
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:checkable="false" />
+    </group>
+</menu>

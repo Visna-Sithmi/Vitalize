@@ -51,11 +51,13 @@ class SignupActivity : AppCompatActivity() {
             editor.putString("name", name)
             editor.putString("email", email)
             editor.putString("password", password)
+            editor.putBoolean("isLoggedIn", true) // ✅ start session immediately
             editor.apply()
 
-            Toast.makeText(this, "Signup successful! Please login.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Signup successful!", Toast.LENGTH_SHORT).show()
 
-            startActivity(Intent(this, LoginActivity::class.java))
+            // Go directly to Home after signup
+            startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }
 

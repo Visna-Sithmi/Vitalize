@@ -11,26 +11,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Vitalize">
+
+        <!-- Habits Activity -->
+        <activity
+            android:name=".ui.main.HabitsActivity"
+            android:exported="true" />
+
+        <!-- Home Activity -->
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
+            android:exported="true" />
+
+        <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
-            android:exported="false" /> <!-- Signup Activity (normal screen, not launcher) -->
+            android:exported="true" />
+
+        <!-- Signup Activity -->
         <activity
             android:name=".SignupActivity"
-            android:exported="false" /> <!-- Splash Screen (Launcher) -->
+            android:exported="true" />
+
+        <!-- Splash Screen (Launcher) -->
         <activity
             android:name=".SplashScreen"
             android:exported="true">
-
-            <!-- Launcher intent filter must be inside the activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

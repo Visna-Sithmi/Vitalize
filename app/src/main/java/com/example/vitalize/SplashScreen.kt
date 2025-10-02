@@ -40,10 +40,19 @@ class SplashScreen : AppCompatActivity() {
         // Start animation on logo
         logo.startAnimation(animationSet)
 
-        // Delay 2.5s then move to SignupActivity (or LoginActivity)
+        // ✅ Delay then decide where to go
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, SignupActivity::class.java))
+            val prefs = getSharedPreferences("VitalizePrefs", MODE_PRIVATE)
+            val isLoggedIn = prefs.getBoolean("isLoggedIn", false)
+
+            if (isLoggedIn) {
+                // Go directly to Home if logged in
+                startActivity(Intent(this, HomeActivity::class.java))
+            } else {
+                // Else go to Signup (or Login)
+                startActivity(Intent(this, SignupActivity::class.java))
+            }
             finish()
-        }, 3000)
+        }, 3000) // 3s delay
     }
 }

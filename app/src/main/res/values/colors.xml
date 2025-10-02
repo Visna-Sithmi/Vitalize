@@ -3,15 +3,20 @@
     <!-- Base colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="cream">#CCCCCC</color>
+    <color name="cream">#FFF8F5</color>
     <color name="inactiveGray">#AAAAAA</color>
+    <color name="darkGray">#444444</color>
 
     <!-- Brand / App theme colors -->
     <color name="primaryBlue">#3BA9F7</color>
     <color name="hintGray">#666666</color>
 
+    <!-- Splash Gradient -->
     <color name="splashstartColor">#FF6FB1</color>
     <color name="splashendColor">#4AC9FF</color>
 
+    <!-- Action Colors -->
+    <color name="logoutRed">#E53935</color>
+    <color name="lightRose">#FFF0F5</color>
 
 </resources>

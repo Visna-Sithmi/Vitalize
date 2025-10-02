@@ -28,16 +28,26 @@ class LoginActivity : AppCompatActivity() {
         val loginBtn = findViewById<Button>(R.id.loginBtn)
         val signupLink = findViewById<TextView>(R.id.signupLink)
 
+        val prefs = getSharedPreferences("VitalizePrefs", MODE_PRIVATE)
 
+        // ✅ Auto-skip login if user is already logged in
+        if (prefs.getBoolean("isLoggedIn", false)) {
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+        }
+
+        // ✅ Login button click
         loginBtn.setOnClickListener {
             val email = emailEt.text.toString().trim()
             val password = passwordEt.text.toString().trim()
 
-            val prefs = getSharedPreferences("VitalizePrefs", MODE_PRIVATE)
             val savedEmail = prefs.getString("email", "")
             val savedPassword = prefs.getString("password", "")
 
             if (email == savedEmail && password == savedPassword) {
+                // ✅ Set login session flag
+                prefs.edit().putBoolean("isLoggedIn", true).apply()
+
                 Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, HomeActivity::class.java))
                 finish()
@@ -46,6 +56,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        // ✅ Navigate to Signup
         signupLink.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
             finish()

@@ -1,4 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@color/splashstartColor" android:state_checked="true" /> <!-- Active -->
-    <item android:color="@color/primaryBlue" /> <!-- Inactive -->
+    <!-- Active / Selected item -->
+    <item android:color="@color/primaryBlue" android:state_checked="true" />
+    <!-- Logout item (force red) -->
+    <item android:color="@color/logoutRed" android:state_pressed="true" />
+    <!-- Default inactive items -->
+    <item android:color="@color/black" />
 </selector>
