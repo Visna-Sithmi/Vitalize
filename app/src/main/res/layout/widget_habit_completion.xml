@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/widget_card_bg">
+
+    <!-- 🌟 Header text -->
+    <TextView
+        android:id="@+id/tvHabitCompletion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Habits: 0%"
+        android:textColor="@color/darkGray"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="10dp" />
+
+    <!-- 🌈 Gradient Progress Bar -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:background="@color/lightGray"
+        android:clipToOutline="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless">
+
+        <ProgressBar
+            android:id="@+id/progressBarHabits"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:progress="0"
+            android:max="100"
+            android:progressDrawable="@drawable/widget_progress_gradient"
+            android:indeterminate="false" />
+    </FrameLayout>
+
+    <!-- 📅 Small caption -->
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keep up your streak!"
+        android:textColor="@color/hintGray"
+        android:textSize="13sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="6dp"/>
+</LinearLayout>

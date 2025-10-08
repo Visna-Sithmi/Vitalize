@@ -1,0 +1,23 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Inactive background circle (Gray) -->
+    <item android:id="@android:id/background">
+        <shape android:shape="ring"
+            android:useLevel="false"
+            android:thickness="14dp"
+            android:innerRadiusRatio="3">
+            <solid android:color="@color/lightGray"/>
+        </shape>
+    </item>
+
+    <!-- Active progress circle (Pink/Gradient Start Color) -->
+    <item android:id="@android:id/progress">
+        <shape android:shape="ring"
+            android:useLevel="true"
+            android:thickness="14dp"
+            android:innerRadiusRatio="3">
+            <solid android:color="@color/splashstartColor"/>
+        </shape>
+    </item>
+
+</layer-list>

@@ -5,5 +5,6 @@ data class Habit(
     var duration: Int,
     var startHour: Int,
     var startMinute: Int,
-    var isCompleted: Boolean = false // ✅ default false
+    var status: String = "pending", // pending, done, canceled
+    var date: String = "" // format yyyy-MM-dd
 )

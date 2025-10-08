@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="56dp"
+    android:layout_height="72dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:background="@android:color/transparent">
+
+    <!-- Emoji -->
+    <TextView
+        android:id="@+id/tvDayEmoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🙂"
+        android:textSize="28sp"
+        android:gravity="center" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/tvDayNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:paddingTop="2dp" />
+
+</LinearLayout>

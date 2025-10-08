@@ -1,9 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
+    <!-- Base App Theme -->
     <style name="Base.Theme.Vitalize" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Customize your light theme -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryVariant">@color/primaryBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/primaryBlue</item>
+        <item name="android:navigationBarColor">@color/white</item>
     </style>
 
-    <style name="Theme.Vitalize" parent="Base.Theme.Vitalize" />
+    <!-- Final Theme used by most of the app -->
+    <style name="Theme.Vitalize" parent="Base.Theme.Vitalize"/>
+
+    <!-- 🔹 Special Theme with No ActionBar (for AlarmActivity, Splash, etc.) -->
+    <style name="Theme.Vitalize.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+
 </resources>

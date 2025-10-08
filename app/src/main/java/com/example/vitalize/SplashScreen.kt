@@ -15,14 +15,14 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_screen)
 
-        // ✅ Make splash fullscreen (hide status + navigation bar)
+        //  Make splash fullscreen (hide status + navigation bar)
         window.decorView.systemUiVisibility = (
                 View.SYSTEM_UI_FLAG_FULLSCREEN
                         or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
                 )
 
-        // ✅ Hide action bar (title bar)
+        // Hide action bar (title bar)
         supportActionBar?.hide()
 
         val logo = findViewById<ImageView>(R.id.logoImage)
@@ -40,7 +40,7 @@ class SplashScreen : AppCompatActivity() {
         // Start animation on logo
         logo.startAnimation(animationSet)
 
-        // ✅ Delay then decide where to go
+        //  Delay then decide where to go
         Handler(Looper.getMainLooper()).postDelayed({
             val prefs = getSharedPreferences("VitalizePrefs", MODE_PRIVATE)
             val isLoggedIn = prefs.getBoolean("isLoggedIn", false)

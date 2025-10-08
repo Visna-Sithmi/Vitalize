@@ -1,40 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Main Menu Group -->
-    <group android:id="@+id/main_group">
-
+    <!-- 🔹 Profile Settings -->
+    <group android:id="@+id/settings_group">
         <item
-            android:title=""
-            android:enabled="false"
-            android:icon="@null" />
-
-        <item
-            android:title=""
-            android:enabled="false"
-            android:icon="@null" />
-
-
-        <item
-            android:id="@+id/nav_backup"
-            android:title="@string/nav_backup"
-            android:icon="@drawable/ic_backup" />
-
-        <item
-            android:id="@+id/nav_restore"
-            android:title="@string/nav_restore"
-            android:icon="@drawable/ic_restore" />
+            android:id="@+id/nav_profile_settings"
+            android:title="Profile Settings"
+            android:icon="@drawable/ic_settings"
+            android:checkable="false" />
     </group>
 
-    <!-- Divider -->
-    <item android:title=""/>
+    <!-- 🔹 Notification Manager -->
+    <group android:id="@+id/notifications_group">
+        <item
+            android:id="@+id/nav_notifications"
+            android:title="Notification Manager"
+            android:icon="@drawable/ic_bell"
+            android:checkable="false" />
+    </group>
 
-    <!-- Footer Logout -->
+    <!-- 🔹 Divider -->
+    <item android:title="" />
+
+    <!-- 🔹 Logout -->
     <group android:id="@+id/logout_group">
         <item
             android:id="@+id/nav_logout"
-            android:title="@string/nav_logout"
+            android:title="Logout"
             android:icon="@drawable/ic_logout"
             android:checkable="false" />
     </group>
+
 </menu>

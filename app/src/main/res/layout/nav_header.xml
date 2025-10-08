@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/splashendColor"
+    android:paddingTop="32dp">
+
+    <!-- White circle for profile -->
+<FrameLayout
+android:layout_width="160dp"
+android:layout_height="160dp"
+android:background="@drawable/circle_white_bg"
+android:gravity="center">
+
+<!-- Profile icon (light gray) -->
+<ImageView
+    android:id="@+id/imgProfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    android:scaleType="fitCenter"
+    android:src="@drawable/ic_user"
+    app:tint="@color/lightGray" />
+</FrameLayout>
+
+
+<TextView
+android:id="@+id/tvUserNameHeader"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:ellipsize="end"
+android:singleLine="true"
+android:marqueeRepeatLimit="marquee_forever"
+android:scrollHorizontally="true"
+android:focusable="true"
+android:focusableInTouchMode="true"
+
+
+
+
+android:text="User Full Name"
+android:textSize="20sp"
+android:textStyle="bold"
+android:textColor="@color/black"
+android:layout_marginTop="16dp"/>
+    </LinearLayout>

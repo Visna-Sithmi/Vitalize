@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Profile Icon -->
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_user"
+            android:background="@drawable/circle_white_bg"
+            android:padding="18dp"
+            android:elevation="6dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Info Box -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_box_white"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layout_margin="8dp"
+            android:elevation="4dp">
+
+            <!-- Name -->
+            <TextView
+                android:text="@string/name"
+                android:textColor="@color/primaryBlue"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGray"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Email -->
+            <TextView
+                android:text="@string/email"
+                android:textColor="@color/primaryBlue"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGray"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Password -->
+            <TextView
+                android:text="@string/password"
+                android:textColor="@color/primaryBlue"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGray"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Change Password -->
+            <Button
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_password"
+                android:backgroundTint="@color/primaryBlue"
+                android:textColor="@color/white"
+                android:minHeight="48dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- 🔹 Two Columns for Profile Fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="16dp">
+
+                <!-- Gender -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:text="@string/gender"
+                        android:textColor="@color/primaryBlue"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <EditText
+                        android:id="@+id/etGender"
+                        android:hint="@string/enter_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="textCapWords"
+                        android:padding="12dp"
+                        android:minHeight="48dp"/>
+                </LinearLayout>
+
+                <!-- Age -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:text="@string/age"
+                        android:textColor="@color/primaryBlue"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <EditText
+                        android:id="@+id/etAge"
+                        android:hint="@string/enter_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:minHeight="48dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 🔹 Second Row (Height & Weight) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="20dp">
+
+                <!-- Height -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:text="Height (cm)"
+                        android:textColor="@color/primaryBlue"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <EditText
+                        android:id="@+id/etHeight"
+                        android:hint="Enter height"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:minHeight="48dp"/>
+                </LinearLayout>
+
+                <!-- Weight -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:text="@string/weight_kg"
+                        android:textColor="@color/primaryBlue"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <EditText
+                        android:id="@+id/etWeight"
+                        android:hint="@string/enter_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:minHeight="48dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- BMI -->
+            <Button
+                android:id="@+id/btnCalculateBMI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate_my_bmi"
+                android:backgroundTint="@color/primaryBlue"
+                android:textColor="@color/white"
+                android:minHeight="48dp"
+                android:elevation="3dp"/>
+        </LinearLayout>
+
+        <!-- Back Home -->
+        <Button
+            android:id="@+id/btnBackHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_to_home"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primaryBlue"
+            android:textStyle="bold"
+            android:minHeight="48dp"
+            android:elevation="3dp"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -43,17 +43,20 @@ android {
 }
 
 dependencies {
-    // AndroidX + UI
+    // AndroidX Core + UI Components
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // ✅ Gson (for saving/loading habits in SharedPreferences)
+    // ✅ MPAndroidChart for Bar Graphs
+    implementation("com.github.PhilJay:MPAndroidChart:3.1.0")
+
+    // ✅ Gson for JSON persistence
     implementation("com.google.code.gson:gson:2.10.1")
 
-    // Testing
+    // ✅ Testing libraries
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

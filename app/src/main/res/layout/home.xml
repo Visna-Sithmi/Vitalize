@@ -59,20 +59,39 @@
                     android:textColor="@color/black"
                     android:clickable="true"
                     android:focusable="true" />
-
             </LinearLayout>
 
-            <!-- Bell Icon -->
-            <ImageView
-                android:id="@+id/notificationIcon"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:src="@drawable/ic_bell"
-                app:tint="@color/splashstartColor"
-                android:contentDescription="@string/desc_notifications" />
+            <!-- 🔔 Bell Icon with badge -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/notificationIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_bell"
+                    app:tint="@color/splashstartColor"
+                    android:contentDescription="@string/desc_notifications" />
+
+                <!-- Red badge counter -->
+                <TextView
+                    android:id="@+id/notificationBadge"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="end|top"
+                    android:background="@drawable/badge_background"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="-4dp"/>
+            </FrameLayout>
         </LinearLayout>
 
-        <!-- 🔹 Calendar Section (improved UI) -->
+        <!-- 🔹 Calendar Section -->
         <LinearLayout
             android:id="@+id/calendarSection"
             android:layout_width="0dp"
@@ -118,7 +137,7 @@
                     android:contentDescription="@string/next_month" />
             </LinearLayout>
 
-            <!-- Days container (Horizontal Scroll) -->
+            <!-- Days container -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -137,16 +156,183 @@
             </HorizontalScrollView>
         </LinearLayout>
 
-        <!-- 🔹 Middle Content Placeholder -->
-        <FrameLayout
+        <!-- 🔹 Middle Content -->
+        <GridLayout
             android:id="@+id/middleContent"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/cream"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:padding="12dp"
+            android:useDefaultMargins="true"
             app:layout_constraintTop_toBottomOf="@id/calendarSection"
             app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- ✅ 1. Habits Completion -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvHabitHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Habits Progress"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chartHabits"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvHabitPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- ✅ 2. Mood -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvMoodHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Mood"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvTodayMood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🙂"
+                    android:textSize="110sp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvMoodName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Neutral"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!-- ✅ 3. Steps with heading + kcal -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Step Count"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvStepsHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 steps"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvKcalHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 kcal"
+                    android:textSize="16sp"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- ✅ 4. Hydration -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/card_bg"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvHydrationHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hydration Progress"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chartHydration"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvHydrationPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </GridLayout>
 
         <!-- 🔹 Bottom Navigation -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -165,16 +351,18 @@
             app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- 🔹 Sidebar Navigation -->
+    <!-- 🔹 Sidebar -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@drawable/sidebar_bg"
+        android:background="@color/splashendColor"
         app:itemTextAppearance="@style/NavDrawerTextStyle"
         app:itemIconTint="@color/nav_item_colors"
         app:itemTextColor="@color/nav_item_colors"
         app:menu="@menu/sidebar_menu"
-        app:itemVerticalPadding="12dp"/>
+        app:itemVerticalPadding="12dp"
+        app:headerLayout="@layout/nav_header"/>
+ <!-- ✅ Added header -->
 </androidx.drawerlayout.widget.DrawerLayout>

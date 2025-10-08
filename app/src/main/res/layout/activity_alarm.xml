@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/splash_gradient"
+    android:padding="32dp">
+
+    <!-- 🔔 Habit / Reminder Title -->
+    <TextView
+        android:id="@+id/tvHabitName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reminder"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:shadowColor="@color/darkGray"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:layout_marginBottom="60dp" />
+
+    <!-- ✨ Attractive Stop Alarm Button -->
+    <Button
+        android:id="@+id/btnStopAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔕 Stop Alarm"
+        android:textSize="20sp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:backgroundTint="@color/logoutRed"
+        android:fontFamily="sans-serif-medium"
+        android:stateListAnimator="@null"
+        android:textColor="@color/white"
+        android:elevation="6dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:clipToOutline="true" />
+
+    <!-- 💡 Motivation Text (dynamic too) -->
+    <TextView
+        android:id="@+id/tvMotivation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stay_motivated"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/cream"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

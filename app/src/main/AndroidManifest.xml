@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    package="com.example.vitalize">
+
+    <!-- ✅ Permissions -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
 
     <application
         android:allowBackup="true"
@@ -12,27 +21,54 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vitalize">
 
-        <!-- Habits Activity -->
+        <!-- 🔹 Profile -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <!-- 🔔 Alarm Fullscreen Activity -->
+        <activity
+            android:name=".ui.main.AlarmActivity"
+            android:allowEmbedded="false"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:showWhenLocked="true"
+            android:taskAffinity=""
+            android:theme="@style/Theme.Vitalize.NoActionBar"
+            android:turnScreenOn="true" />
+
+        <!-- 🔹 Step Counter Service -->
+        <service
+            android:name=".StepService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="health" />
+
+        <!-- 🔹 Activities -->
+        <activity
+            android:name=".StepsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.HydrateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.MoodsActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.main.HabitsActivity"
-            android:exported="true" />
-
-        <!-- Home Activity -->
+            android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:exported="true" />
-
-        <!-- Login Activity -->
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
-
-        <!-- Signup Activity -->
+            android:exported="false" />
         <activity
             android:name=".SignupActivity"
-            android:exported="true" />
+            android:exported="false" />
 
-        <!-- Splash Screen (Launcher) -->
+        <!-- 🔹 Splash Screen (Launcher) -->
         <activity
             android:name=".SplashScreen"
             android:exported="true">
@@ -41,6 +77,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 🔹 Receivers -->
+        <!-- Hydration Reminder -->
+        <receiver
+            android:name=".ui.main.ReminderReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".ui.main.StopAlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Habit Reminder -->
+        <receiver
+            android:name=".ui.main.HabitReminderReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".ui.main.HabitStopAlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!-- ✅ Habit Completion Widget -->
+        <receiver
+            android:name=".ui.widget.HabitCompletionWidget"
+            android:label="Habit Completion"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/habit_completion_widget_info" />
+        </receiver>
 
     </application>
 

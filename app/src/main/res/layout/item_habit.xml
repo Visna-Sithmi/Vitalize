@@ -8,7 +8,7 @@
     app:cardElevation="6dp"
     android:foreground="?attr/selectableItemBackground">
 
-    <!-- ✅ Container for row background (we will change this dynamically in adapter) -->
+    <!-- ✅ Container for row background (dynamic color in adapter) -->
     <LinearLayout
         android:id="@+id/habitRow"
         android:layout_width="match_parent"
@@ -17,15 +17,6 @@
         android:gravity="center_vertical"
         android:padding="16dp"
         android:background="@color/white">
-
-        <!-- ✅ CheckBox in front -->
-        <CheckBox
-            android:id="@+id/cbCompleted"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/primaryBlue"
-            android:layout_marginEnd="12dp"
-            android:contentDescription="@string/edit_habit" />
 
         <!-- Habit Name -->
         <TextView

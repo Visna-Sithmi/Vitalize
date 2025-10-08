@@ -51,4 +51,58 @@
 
     <!-- Sample Data -->
     <string name="sample_habit_time">10 mins | 08:00</string>
+
+    <!-- Moods -->
+    <string name="my_moods">My Moods</string>
+    <string name="add_mood">Add Mood</string>
+    <string name="mood_today">Today’s Mood</string>
+    <string name="most_chosen_mood">Most Chosen Mood</string>
+    <string name="share_mood_summary">Share Mood Summary</string>
+
+    <!-- Mood Labels -->
+    <string name="mood_happy">Happy</string>
+    <string name="mood_neutral">Neutral</string>
+    <string name="mood_sad">Sad</string>
+    <string name="mood_angry">Angry</string>
+    <string name="mood_empty">No Mood</string>
+
+    <!-- Hydration Tracker -->
+    <string name="today_water">Today: %1$d ml</string>
+    <string name="enter_water">Please enter water amount</string>
+    <string name="hydration_tracker">Hydration Tracker</string>
+    <string name="hint_enter_water">Enter water (ml)</string>
+    <string name="add_water">Add Water</string>
+    <string name="today_total_default">Today: 0 ml</string>
+
+    <string name="steps_tracker">Steps Tracker</string>
+    <string name="default_steps">0 Steps</string>
+    <string name="default_calories">0 kcal</string>
+    <string name="past_30_days">Past 30 Days</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+
+    <string name="steps_format">%1$d Steps</string>
+    <string name="calories_format">%1$d kcal</string>
+    <string name="steps">steps</string>
+    <string name="kcal">kcal</string>
+    <string name="steps_on_date">Steps on %1$d/%2$d/%3$d</string>
+    <string name="calories_label">Calories Burned (7 days)</string>
+
+    <string name="hint_new_password">New Password</string>
+    <string name="stay_motivated">Stay motivated ✨</string>
+    <string name="reminder">⏰ Reminder</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
+    <string name="change_password">Change Password</string>
+    <string name="gender">Gender</string>
+    <string name="enter_gender">Enter gender</string>
+    <string name="age">Age</string>
+    <string name="enter_age">Enter age</string>
+    <string name="enter_weight">Enter weight</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="calculate_my_bmi">Calculate My BMI</string>
+    <string name="back_to_home">Back to Home</string>
+
+
 </resources>
