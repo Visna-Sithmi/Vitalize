@@ -91,7 +91,7 @@ ConstraintLayout / LinearLayout
 SharedPreferences / Local Storage (as applicable)
 
 🎬 Demo Video
-▶️ Watch the Demo:
+
 
 https://drive.google.com/file/d/1NMHlcvM6HbX3v-hEqhzXvpK1QZnQmOVU/view?usp=sharing
 
