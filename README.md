@@ -112,9 +112,8 @@ Improving UI/UX through clean layouts and navigation
 Understanding user engagement in wellness apps
 
 📁 Project Structure (preview)
-
+```
 app/
-│
 ├── build.gradle.kts
 ├── settings.gradle.kts
 │
@@ -122,17 +121,20 @@ app/
 │   └── main/
 │       ├── AndroidManifest.xml
 │       │
-│       ├── java/com/example/vitalize/
-│       │      ├── activities/
-│       │      ├── models/
-│       │      ├── utils/
+│       ├── java/
+│       │   └── com/
+│       │       └── example/
+│       │           └── vitalize/
+│       │               ├── activities/
+│       │               ├── models/
+│       │               └── utils/
 │       │
 │       └── res/
-│           ├── layout/          (XML layout files)
-│           ├── drawable/        (icons, shapes)
-│           ├── values/          (colors.xml, strings.xml, styles.xml)
-│           └── xml/             (widget & alarm configs)
-
+│           ├── layout/        # XML layout files
+│           ├── drawable/      # Icons, images, shapes
+│           ├── values/        # colors.xml, strings.xml, styles.xml
+│           └── xml/           # Widget & alarm configurations
+```
 🤝 Feedback
 
 Feedback and suggestions are always welcome.
